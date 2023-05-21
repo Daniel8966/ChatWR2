@@ -13,6 +13,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
+app.get('/systemStatus', async (req, res) => {
+  res.status(200).send('En línea');
+})
+
+
 
 app.get('/:nombre', function (req, res) {
   let nombre = req.params.nombre
