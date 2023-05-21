@@ -5,7 +5,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var path = require('path')
 app.set('port', process.env.PORT || 3000);
-server.listen(app.get('port'), () => console.log('Servidor iniciado en 3000'));
+server.listen(app.get('port'), () => console.log(`Servidor iniciado en: ${process.env.PORT}`));
 
 //dotenv ?
 app.use(express.static(path.join(__dirname, 'public')));
