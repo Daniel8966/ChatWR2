@@ -14,10 +14,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/systemStatus', async (req, res) => {
-  const localhost = req.headers.host;
-  res.status(200).send( `El proyecto está desplegado en: ${localhost}`  );
-  
-
+  res.status(200).send('En línea');
 })
 
 
